@@ -1,8 +1,7 @@
 streamlit
 xgboost
 pandas
-scikit-learn==1.2.2  # replace with your version
-joblib
+scikit-learn==1.2.2 
 numpy
 matplotlib
 plotly
