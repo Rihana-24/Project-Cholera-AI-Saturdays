@@ -1,9 +1,10 @@
 streamlit
 xgboost
 pandas
-scikit-learn
+scikit-learn==1.2.2  # replace with your version
 joblib
 numpy
 matplotlib
 plotly
 seaborn
+
