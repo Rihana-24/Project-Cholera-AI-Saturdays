@@ -12,7 +12,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.metrics import mean_squared_error, r2_score
 
 # ------------------ Load dataset ------------------
-data_path = "C:/Users/HP-PC/Desktop/AI Lagos Project/NGA-Table 1.csv"
+data_path = "C:/Users/HP-PC/Desktop/Project Cholera AI Saturdays/NGA-Table 1.csv"
 df = pd.read_csv(data_path)
 
 # ------------------ Preprocessing ------------------
@@ -34,14 +34,14 @@ if 'State' in df.columns:
     df['State'].fillna('Unknown', inplace=True)
 
 # Keep only the features we want (ignore month_sin, month_cos)
-feature_cols = ['Year', 'State', 'Cases','CFR (%)', 'Population']
+feature_cols = ['Year', 'State','CFR (%)', 'Population']
 target_col = 'Cases/100,000'
 
 X = df[feature_cols]
 y = df[target_col]
 
 # ------------------ Preprocessing Pipeline ------------------
-numeric_features = ['Year', 'Cases','CFR (%)', 'Population']
+numeric_features = ['Year','CFR (%)', 'Population']
 categorical_features = ['State']
 
 numeric_transformer = Pipeline(steps=[
